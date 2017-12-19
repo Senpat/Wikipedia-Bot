@@ -33,7 +33,7 @@ def run_wikibot(reddit):
                   string2 = splitted[splitted.index("!WikiBot")+2]
                 
                   print('Link is unique...posting explanation for ' + string1 + ' ' + string2 + '\n')
-                  comment.reply('(' + string1 + ' ' + string2 + ')[wikipedia.com/wiki/'+string1+'_'+string2']')                 
+                  comment.reply('(' + string1 + ' ' + string2 + ')[wikipedia.com/wiki/'+string1+'_'+string2 + ']')                 
                   file_obj_r.close()
 
                   file_obj_w = open(path,'a+')
