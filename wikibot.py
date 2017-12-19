@@ -28,16 +28,19 @@ def run_wikibot(reddit):
             if comment.id not in file_obj_r.read().splitlines():
                 
                 splitted = comment.body.split(" ")
-                string1 = splitted[splitted.index("!WikiBot")+1]
-                string2 = splitted[splitted.index("!WikiBot")+2]
+                if(splitted.index("!WikiBot") + 2 > splitted.length-1):
+                  string1 = splitted[splitted.index("!WikiBot")+1]
+                  string2 = splitted[splitted.index("!WikiBot")+2]
                 
-                print('Link is unique...posting explanation for ' + string1 + ' ' + string2 + '\n')
-                comment.reply('wikipedia.com/wiki/'+string1+'_'+string2)                 
-                file_obj_r.close()
+                  print('Link is unique...posting explanation for ' + string1 + ' ' + string2 + '\n')
+                  comment.reply('(' + string1 + ' ' + string 2 + ')[wikipedia.com/wiki/'+string1+'_'+string2']')                 
+                  file_obj_r.close()
 
-                file_obj_w = open(path,'a+')
-                file_obj_w.write(comment.id + '\n')
-                file_obj_w.close()
+                  file_obj_w = open(path,'a+')
+                  file_obj_w.write(comment.id + '\n')
+                  file_obj_w.close()
+                else:
+                  print('not complete')
             else:
                 print('Already visited link...no reply needed\n')
             
