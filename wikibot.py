@@ -28,7 +28,7 @@ def run_wikibot(reddit):
             if comment.id not in file_obj_r.read().splitlines():
                 
                 splitted = comment.body.split(" ")
-                if(splitted.index("!WikiBot") + 2 > splitted.length-1):
+                if(splitted.index("!WikiBot") + 2 > splitted.len()-1):
                   string1 = splitted[splitted.index("!WikiBot")+1]
                   string2 = splitted[splitted.index("!WikiBot")+2]
                 
