@@ -1,4 +1,4 @@
-#Fail
+
 
 import praw
 import time
@@ -13,7 +13,7 @@ def authenticate():
   #reddit = praw.Reddit('wikibot',user_agent = 'web:wiki-bot:v0.1 (by /u/The_Senpat)')
   reddit = praw.Reddit(client_id='R16vtWU89Twrag',
                      client_secret="HRfn5yqjpiISU2zRTQkKDj8RFTw", password='spbot3password',
-                     user_agent='spb3 by /u/TheSenpat', username='spb3')
+                     user_agent='spb3', username='spb3')
   print('Authenticated as {}\n'.format(reddit.user.me()))
   return reddit
 
