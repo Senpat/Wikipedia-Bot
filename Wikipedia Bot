@@ -43,8 +43,6 @@ def run_wikibot(reddit):
             else:
                 print('Already visited link...no reply needed\n')
             
-            #comment.reply('hi')
-            
             time.sleep(60)
             
             
@@ -53,7 +51,7 @@ def main():
     reddit = authenticate()
     print("main3")
     while True:
-        run_hibot(reddit)
+        run_wikibot(reddit)
       
 if __name__ == '__main__':
     print("main1")
